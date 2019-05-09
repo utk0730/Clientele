@@ -1,0 +1,9 @@
+form{
+    background: lightskyblue;
+    padding:2rem;
+    width:50%;
+    margin:2rem  auto;
+}
+input{
+   width:90% !important;
+}
