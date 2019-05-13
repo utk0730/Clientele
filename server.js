@@ -4,13 +4,17 @@ const mongoose = require('mongoose')
 const route = require('./routes/clients.apis')
 const cors = require('cors')
 const path = require('path')
-
+const connectDB = require('./config/db')
 const app = express()
 
-//connect to mongoDB
-mongoose.connect('mongodb://localhost/clientsdb',{useNewUrlParser : true})
-mongoose.Promise = global.Promise
-mongoose.set('useCreateIndex', true)
+//connect to local mongoDB
+// mongoose.connect('mongodb://localhost/clientsdb',{useNewUrlParser : true})
+// mongoose.Promise = global.Promise
+// mongoose.set('useCreateIndex', true)
+
+// connect to atlas mongoDB
+
+connectDB()
 
 
 //middlware - for static assests
